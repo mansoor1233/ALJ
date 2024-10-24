@@ -23,7 +23,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(
-					"C:\\Users\\maqsu\\eclipse-workspace\\ALJ\\AppianTesting\\src\\test\\java\\com\\alj\\pages\\config.properties");
+					"C:\\Users\\Tammina User\\git\\ALJ\\src\\test\\java\\com\\alj\\pages\\config.properties");
 			prop.load(fis);
 
 		} catch (FileNotFoundException e) {
@@ -39,7 +39,7 @@ public class TestBase {
 
 		if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\maqsu\\eclipse-workspace\\ALJ\\AppianTesting\\Driver\\chromedriver.exe");
+					"C:\\Users\\Tammina User\\git\\ALJ\\Driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browsername.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",

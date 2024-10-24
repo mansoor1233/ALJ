@@ -45,12 +45,12 @@ public class LoginPage extends TestBase {
 
 	}
 
-	public String logindetails(String un, String pwd) {
+	public void logindetails(String un, String pwd) {
 		username.sendKeys(un);
 		password.sendKeys(pwd);
 		submit.click();
 		//return new homepage();
-		return null ;
+		
 
 	}
 

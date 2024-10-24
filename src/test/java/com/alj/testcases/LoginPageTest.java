@@ -24,33 +24,29 @@ public class LoginPageTest extends TestBase {
 		loginPage = new LoginPage();
 
 	}
-	
+
 	@org.testng.annotations.Test(priority = 1)
 	public void loginpagePageTitle() {
-		String title =loginPage.ValidateLoginPageTitle();
+		String title = loginPage.ValidateLoginPageTitle();
 		Assert.assertEquals(title, "Appian for ALJ Automotive Holding Company Limited");
-		
+
 	}
-	
+
 	@org.testng.annotations.Test(priority = 2)
 	public void AppianLogoImageTest() {
-		boolean flag= loginPage.validateAppianLogo();
-		Assert.assertTrue(flag);;
+		boolean flag = loginPage.validateAppianLogo();
+		Assert.assertTrue(flag);
+		;
 	}
-	
+
 	@org.testng.annotations.Test(priority = 3)
 	public void LoginDetailsTest() {
-	loginPage.logindetails(prop.getProperty("username"),prop.getProperty("password"));
-		
+		loginPage.logindetails(prop.getProperty("username"), prop.getProperty("password"));
+
 	}
-	
-	
-	
-	
-	
+
 	@AfterMethod
-	public void teardown()
-	{
+	public void teardown() {
 		driver.quit();
 	}
 
